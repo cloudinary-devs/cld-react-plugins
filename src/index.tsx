@@ -34,7 +34,7 @@ class App extends React.Component {
 	render() {
 		return (
 			<div>
-				<h2>Render a cloudinary image</h2>
+				<h2>Render a Cloudinary image</h2>
 				<AdvancedImage cldImg={cloudinaryImage} />
 				<div style={{ height: "20px" }}></div>
 				<h2>Cloudinary image with default accessibility</h2>
