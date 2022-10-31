@@ -27,7 +27,7 @@ const brownSheep = new CloudinaryImage("brown_sheep", { cloudName: "demo" });
 const woman = new CloudinaryImage("woman", { cloudName: "demo" });
 const cat = new CloudinaryImage("fat_cat", { cloudName: "demo" });
 const largeImage = new CloudinaryImage("oil", {
-	cloudName: "rcstraus"
+	cloudName: "demo"
 });
 
 class App extends React.Component {
@@ -43,12 +43,12 @@ class App extends React.Component {
 				<h2>Cloudinary image with colorblind accessibility</h2>
 				<AdvancedImage
 					cldImg={cloudinaryImage}
-					plugins={[accessibility("colorblind")]}
+					plugins={[accessibility({ mode: "colorblind" })]}
 				/>
 				<h2>Cloudinary image with responsive</h2>
 				<div>Resize window to see changes (100 is the step size in px)</div>
-				<AdvancedImage cldImg={cloudinaryImage} plugins={[responsive(100)]} />
-				<h2>Scroll down to see images lazyload</h2>
+				<AdvancedImage cldImg={cloudinaryImage} plugins={[responsive({ steps: 100 })]} />
+				<h2>Scroll down to see images lazy load</h2>
 				<div style={{ height: "700px" }}>
 					You can open your network tab to see the images loading
 				</div>
